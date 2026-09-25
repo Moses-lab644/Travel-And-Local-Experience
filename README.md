@@ -50,3 +50,12 @@ Environment variables are settings supplied outside the source code (such as the
 Setup:
 
 cp .env.example .env
+
+## Discovery data verification
+
+In-memory place and activity data is loaded from `fixtures/discovery-records.json` at process startup (not persisted between restarts).
+
+To verify the lookups work:
+
+
+This checks a known place, a known activity, and a deliberately unavailable activity ID, confirming the found/not-found lookup behavior.
