@@ -1,8 +1,8 @@
 {
   "name": "wayfarinook-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Wayfarinook TypeScript Express API",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/index.ts",
@@ -14,7 +14,9 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "express": "^5.2.1"
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
