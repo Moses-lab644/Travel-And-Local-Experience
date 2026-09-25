@@ -1,8 +1,7 @@
 import express from "express";
+import { env } from "./config/env.js";
 
 const app = express();
-
-const port = Number(process.env.PORT) || 3000;
 
 app.get("/health", (_req, res) => {
   res.json({
@@ -10,6 +9,6 @@ app.get("/health", (_req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Wayfarinook API listening on port ${port}`);
+app.listen(env.PORT, () => {
+  console.log(`Wayfarinook API listening on port ${env.PORT}`);
 });
