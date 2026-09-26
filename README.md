@@ -59,3 +59,14 @@ To verify the lookups work:
 
 
 This checks a known place, a known activity, and a deliberately unavailable activity ID, confirming the found/not-found lookup behavior.
+## Discovery endpoint
+
+`GET /places/:id` — returns a single place by ID.
+
+- `200 OK` with the place data if found.
+- `400 Bad Request` if `id` is missing or invalid.
+- `404 Not Found` if no place matches the given ID.
+
+Example:
+
+curl http://localhost:3000/places/place-demo-001
