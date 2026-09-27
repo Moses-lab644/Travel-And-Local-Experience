@@ -85,13 +85,7 @@ Automated API tests use Jest and Supertest to send real HTTP requests to the Exp
 npm test
 
 This covers `GET /places/:id`: a successful lookup (200), a malformed id (400), and a well-formed but unknown id (404).
-## Running tests
 
-Automated API tests use Jest and Supertest to send real HTTP requests to the Express app (no real server/port, no database).
-
-npm test
-
-This covers `GET /places/:id`: a successful lookup (200), a malformed id (400), and a well-formed but unknown id (404).
 ## Running tests
 
 Automated API tests use Jest and Supertest to send real HTTP requests to the Express app (no real server/port, no database).
