@@ -64,9 +64,15 @@ This checks a known place, a known activity, and a deliberately unavailable acti
 `GET /places/:id` — returns a single place by ID.
 
 - `200 OK` with the place data if found.
-- `400 Bad Request` if `id` is missing or invalid.
-- `404 Not Found` if no place matches the given ID.
+- `400 Bad Request` if `id` is missing or contains characters other than letters, numbers, and hyphens.
+- `404 Not Found` if `id` is validly formatted but no place matches it.
 
-Example:
+Examples:
 
 curl http://localhost:3000/places/place-demo-001
+curl http://localhost:3000/places/place-demo-999
+curl "http://localhost:3000/places/invalid@id!"
+
+The third example returns 400 with:
+
+{"status":"error","message":"id must contain only letters, numbers, and hyphens"}

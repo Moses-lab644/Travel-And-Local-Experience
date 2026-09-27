@@ -5,7 +5,10 @@ import { findPlaceById } from "../services/discoveryService.js";
 export const discoveryRouter = Router();
 
 const paramsSchema = z.object({
-  id: z.string().min(1, "id is required"),
+  id: z
+    .string()
+    .min(1, "id is required")
+    .regex(/^[a-zA-Z0-9-]+$/, "id must contain only letters, numbers, and hyphens"),
 });
 
 discoveryRouter.get("/places/:id", (req, res) => {
