@@ -69,6 +69,7 @@ This checks a known place, a known activity, and a deliberately unavailable acti
 
 Examples:
 
+
 curl http://localhost:3000/places/place-demo-001
 curl http://localhost:3000/places/place-demo-999
 curl "http://localhost:3000/places/invalid@id!"
@@ -76,3 +77,25 @@ curl "http://localhost:3000/places/invalid@id!"
 The third example returns 400 with:
 
 {"status":"error","message":"id must contain only letters, numbers, and hyphens"}
+
+## Running tests
+
+Automated API tests use Jest and Supertest to send real HTTP requests to the Express app (no real server/port, no database).
+
+npm test
+
+This covers `GET /places/:id`: a successful lookup (200), a malformed id (400), and a well-formed but unknown id (404).
+## Running tests
+
+Automated API tests use Jest and Supertest to send real HTTP requests to the Express app (no real server/port, no database).
+
+npm test
+
+This covers `GET /places/:id`: a successful lookup (200), a malformed id (400), and a well-formed but unknown id (404).
+## Running tests
+
+Automated API tests use Jest and Supertest to send real HTTP requests to the Express app (no real server/port, no database).
+
+npm test
+
+This covers `GET /places/:id`: a successful lookup (200), a malformed id (400), and a well-formed but unknown id (404).
